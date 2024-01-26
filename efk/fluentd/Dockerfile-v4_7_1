@@ -1,0 +1,2 @@
+FROM quay.io/fluentd_elasticsearch/fluentd:v4.7.1
+# docker pull quay.io/fluentd_elasticsearch/fluentd:v4.7.1
