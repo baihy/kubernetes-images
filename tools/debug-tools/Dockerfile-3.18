@@ -3,7 +3,7 @@ FROM alpine:3.18
 # RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 # RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
-# 更新一下源,并安装软件
+# 更新一下源,并安装必要软件
 RUN apk update && apk --no-cache add curl vim openssh-client busybox-extras drill net-tools
 # 配置时区。tzdata的作用是配置时区
 RUN apk update && apk --no-cache add tzdata && ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/Shanghai" > /etc/timezone
